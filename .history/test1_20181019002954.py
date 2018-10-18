@@ -1,25 +1,22 @@
-# import re
-class Db(object):
-    def __init__(self):
-        self.cfg_list = []
-    # self.cfg_list = [Cfg,Cfg,Cfg]
+class part1(object):
+    def __init__(self,name):
+        self.name = name
 
-# class Cfg(object):
-#     def __init__():
-#         self.paras = {}
+    @classmethod
+    def create(cls,par1):
+        k = cls.func1(cls,par1)
+        b = cls('a')
+        cls.result = b.func1(k)
+        return b 
 
-#     @classmethod
-#     def create(cls,path1,path2):
-#        # get name
-#         for line in path1:
-#             # name = line.split(',')
-#             self.paras[name] = Para(name)
-#             self.paras[name].input_sit(line)
-#         for line in path2:
-#             if not self.paras.get(name):
-#                 self.paras[name] = Para(name)
-#             self.paras[name].input_ecc(line)
-                
+    def func1(self,b):
+        b += 2
+        return b
+
+class part2(part1):
+    def func1(self,a):
+        a += 1
+        return a
 
 class Para(object):
     def __init__(self,name):
@@ -62,7 +59,7 @@ class Para(object):
 
     @classmethod
     def create(cls,line1,line2):
-        name1,value1,value2 = cls.split_func(cls,line1,line2)
+        name,value1,value2 = cls.split_func(cls,line1,line2)
         k = cls(name)
         k.input_ecc(line1)
         k.input_sit(line2)
@@ -79,23 +76,6 @@ class Para_Set(Para):
         value2 = line2
         return name1,value1,value2
 
-    
 
-
-
-def func(names,values):
-    workers = []
-    for group in zip(names,values):
-        name,value = group
-        workers.append(Cfg(name).input_sit(value))
-    return workers
-
-# names =  ['A','B','C']
-# values = [1,2,3]
-# test = func(names,values)
-# print(test)
-name = 'A'
-k = Para(name)
-k.input_sit(1)
-k.diff_func()
-print(dir(k))
+b = Para_Set.create('a','b')
+print(b)

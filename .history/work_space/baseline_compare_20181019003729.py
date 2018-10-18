@@ -79,7 +79,15 @@ class Para_Set(Para):
         value2 = line2
         return name1,value1,value2
 
-    
+# class Para_Space(Para):
+#     def split_func(self,line1,line2):
+#         # name1 = line1.split(',')[0]
+#         # value1 = {}...
+#         name1 = 'a'
+#         value1 = line1
+#         value2 = line2
+#         return name1,value1,value2
+#  ... 
 
 
 

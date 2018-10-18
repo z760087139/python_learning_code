@@ -24,7 +24,7 @@ class Db(object):
 class Para(object):
     def __init__(self,name):
         self.name = name
-        self.diff = 0
+        self.diff = False
 
     def input_sit(self,value):
         self.sit = value
@@ -35,14 +35,12 @@ class Para(object):
     def diff_func(self):
         try : 
             if self.sit == self.ecc:
-                self.diff = 1
-            else:
-                self.diff = 2    
+                self.diff = True
         except NameError as e:
             if 'sit' in str(e):
-                return 3
-            elif 'ecc' in str(e):
                 return 4
+            elif 'ecc' in str(e):
+                return 5
             else :
                 raise
         except :
@@ -59,7 +57,6 @@ class Para(object):
 
     def get_diff(self):
         return self.diff
-
     @classmethod
     def create(cls,line1,line2):
         name1,value1,value2 = cls.split_func(cls,line1,line2)
@@ -74,9 +71,6 @@ class Para_Set(Para):
     def split_func(self,line1,line2):
         # name1 = line1.split(',')[0]
         # value1 = {}...
-        name1 = 'a'
-        value1 = line1
-        value2 = line2
         return name1,value1,value2
 
     
