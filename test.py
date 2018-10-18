@@ -1,16 +1,51 @@
-def test(n):
-    result = [2]
-    for i in range(0,n):
-        k = result[-1]+1
-        for c in result:
-            if k%c == 0:
-                if c != result[-1]:
-                    continue
-                else:
-                    result.add(k)
-            else:
-                k+1
-                break
-    print(result)
+class Db(object):
+    def __init__(self):
+        self.cfg_list = []
+    # self.cfg_list = [Cfg,Cfg,Cfg]
 
-test(3)
+class Cfg(object):
+    def __init__(self,name):
+        self.name = name
+
+    # def input_sit(self,value):
+    #     if self.sit = value :
+
+
+    # def get_diff(self):
+
+class Para(object):
+    def __init__(self,name):
+        self.name = name
+        self.diff = False
+
+    def input_sit(self,value):
+        self.sit = value
+
+    def input_ecc(self,value):
+        self.ecc = value
+
+    def get_sit(self,value):
+        return self.sit
+    
+    def get_ecc(self,value):
+        return self.ecc
+
+    def diff_func(self):
+        if self.sit not in locals() :
+            print(locals())
+
+def func(names,values):
+    workers = []
+    for group in zip(names,values):
+        name,value = group
+        workers.append(Cfg(name).input_sit(value))
+    return workers
+
+# names =  ['A','B','C']
+# values = [1,2,3]
+# test = func(names,values)
+# print(test)
+name = 'A'
+k = Para(name)
+k.input_sit(1)
+k.diff_func()
