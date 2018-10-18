@@ -49,4 +49,4 @@ name = 'A'
 k = Para(name)
 k.input_sit(1)
 k.diff_func()
-print(dir(k))
+dir(k)
