@@ -4,12 +4,12 @@ class P1 (object):
 
     @classmethod
     def create(cls,line):
-        name = cls.line_split(line)['name']
+        name = cls.line_split(cls,line)['name']
         return cls(name)
 
 class P2(P1):
     @classmethod
-    def line_split(cls,line):
+    def line_split(self,line):
         result = {}
         result['name'] = line
         result['other'] = 1

@@ -107,7 +107,5 @@ def func(names,values):
 
 b = Para_Set.create('a','b')
 print(b)
-c = Para_Set('c')
+c = Para_Set.create('c','d')
 print(c)
-d = Para_Set.create('d','e')
-print(d)

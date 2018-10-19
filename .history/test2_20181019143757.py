@@ -1,6 +1,6 @@
 from contextlib import contextmanager
 
-@contextmanager
+# @contextmanager
 def demo():
     print ('这里的代码相当于__enter__里面的代码')
     yield 'i ma value'

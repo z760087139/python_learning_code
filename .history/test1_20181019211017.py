@@ -1,7 +1,6 @@
 class part1(object):
     def __init__(self,name):
         self.name = name
-        self.other = 1
     @classmethod
     def create(cls,a):
         k = cls.func1(cls,a)
@@ -13,10 +12,7 @@ class part1(object):
         return b
     @classmethod
     def use_func2(cls,a):
-        tmp_result = cls.func2(a)
-        k = cls(str(tmp_result))
-        result = cls.func1(cls,cls.other)
-        return str(result)
+        cls.
 
 
 
@@ -31,5 +27,11 @@ class part2(part1):
 
 
 
-b = part2.use_func2(1)
+b = part2.create(1)
 print(b)
+c = part2.create(20)
+print(c)
+b.result = 6
+print(b)
+a = part2.create(10)
+print(a)

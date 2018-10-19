@@ -63,12 +63,10 @@ class Para(object):
     @classmethod
     def create(cls,line1,line2):
         name,value1,value2 = cls.split_func(cls,line1,line2)
-        cls.input_sit(cls,value1)
-        cls.input_ecc(cls,value2)
         k = cls(name)
-        # k.input_ecc(line1)
-        # k.input_sit(line2)
-        return cls
+        k.input_ecc(line1)
+        k.input_sit(line2)
+        return k 
         
         
 
@@ -107,7 +105,3 @@ def func(names,values):
 
 b = Para_Set.create('a','b')
 print(b)
-c = Para_Set('c')
-print(c)
-d = Para_Set.create('d','e')
-print(d)

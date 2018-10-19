@@ -105,8 +105,5 @@ def mapreduce(data_dir):
 # 本章要点
 # 类的继承和@classmethod 的用法
 # @classmethod 实际上是针对  "类对象"  用的方法
-# @classmethod 实际上是针对  "类对象"  用的方法
-# @classmethod 实际上是针对  "类对象"  用的方法
 # 普通的def函数是针对  "类的实例" 用的方法
 # 
-# 例子查看ex_classmethod.py
