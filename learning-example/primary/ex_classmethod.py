@@ -9,6 +9,7 @@
 # 2.需要在实例化前使用部分类的方法
 #  
 # 注意一下例子
+
 class part1(object):
     def __init__(self,name):
         self.name = name
@@ -29,6 +30,7 @@ class part2(part1):
         a += 1
         return a
 
+
 b = part2.create(1)
 print(b)
 # 运行结果
@@ -47,4 +49,4 @@ print(a)
 # b.name = a, b.result = 6, c.result=12 ,a.result=12 c.result 发生变化 当前c.result和a.result相同,都是part2.result
 
 # 关于@classmethod语法
-class part3(object)
+# class part3(object)
