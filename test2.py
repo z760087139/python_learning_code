@@ -1,8 +1,5 @@
-class part(object):
-    def __init__(self):
-        self.name = 'name'
+def func_3(**kwargs):
+    print(*kwargs)
 
-a = part()
-b = part()
-print(id(a))
-print(id(b))
+func_3(b = 2)
+print('something')

@@ -1,19 +1,13 @@
-class P1 (object):
-    def __init__(self,name):
-        self.name = name
+class Base(object):
+    pass
 
-    @classmethod
-    def create(cls,line):
-        name = cls.line_split(line)['name']
-        return cls(name)
+class M1(object):
+    def just_test(self):
+        return False
 
-class P2(P1):
-    @classmethod
-    def line_split(cls,line):
-        result = {}
-        result['name'] = line
-        result['other'] = 1
-        return result
+class Main(M1,Base):
+    pass
 
-k = P2.create('a')
+k = Main()
 print(k)
+assert k.just_test()

@@ -10,3 +10,26 @@ k.start()
 k.join()
 print('child finish')
 # mi.start_thread(name)
+
+# 进程之间通信可以使用Queue
+# 但是如果使用了进程池Pool,需要使用专门的Manager().Queue()
+# q = Queue
+# q.get() q.put() q.empty() q.full()
+
+from multiprocessing import Pool
+from datetime import datetime
+import time
+def func(i):
+    start = datetime.now().strftime('%T')
+    print('%s is start,%s' % (str(i),start))
+    time.sleep(2)
+    end = datetime.now().strftime('%T')
+    print('%s is end,%s' % (str(i),end))
+
+if __name__=='__main__':
+    pool =Pool(3)
+    for i in range(2):
+        pool.apply_async(func,args=(i,))
+    pool.close()
+    pool.join()
+    print('something')

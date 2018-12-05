@@ -53,6 +53,7 @@ class BinaryTree(ToDictMixin):
         self.left = left
         self.right = right
 
+print(BinaryTree.__dict__)
 
 # Example 4
 tree = BinaryTree(10,
