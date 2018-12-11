@@ -2,9 +2,10 @@
 import mysql.connector
 import mysql.connector.pooling
 
-cnx = mysql.connector.connect(user='scott', password='password',
-                              host='127.0.0.1',
-                              database='employees')
+cnx = mysql.connector.connect(user='zeng', password="Zeng123+",
+                              host='192.168.23.128',
+                              database='employees',
+                              port='3306')
 # cnx.close()
 
 # OPTIONS:
