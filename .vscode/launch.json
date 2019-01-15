@@ -12,6 +12,28 @@
             "stopOnEntry": true
         },
         {
+            "name": "Python 2.7",
+            "pythonPath": "F:\\learning\\vir_python2.7\\python2.7\\Scripts\\python.exe",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "stopOnEntry": true
+        },
+        {
+            "name": "Python 3.7",
+            "pythonPath": "F:\\learning\\vir_python3.7\\python3.7\\Scripts\\python.exe",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "stopOnEntry": true
+        },
+        {
+            "name": "Chrome current file",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${file}"
+        },
+        {
             "name": "Python: Attach",
             "type": "python",
             "request": "attach",

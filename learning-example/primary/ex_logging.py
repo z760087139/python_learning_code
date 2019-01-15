@@ -18,7 +18,7 @@ import time
 
 # 日志格式
 # logging.basicConfig(level=logging.DEBUG,
-                    # format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+#                     format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
 # 实际使用时需要创建logger
 # loggername = 'name'

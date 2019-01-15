@@ -1,6 +1,7 @@
 import time
 import random
 import multiprocessing as mp
+import os
 def test_func(name):
     for i in range(5):
         print(name)
@@ -13,3 +14,6 @@ def start_thread(name):
     k.start()
     k.join()
     print('done')
+
+print('pid :%s' % os.getpid())
+print('start')

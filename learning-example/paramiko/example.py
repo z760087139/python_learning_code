@@ -17,6 +17,10 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect(hostname=host, username=user, password = password)
 # command
 stdin, stdout, stderr = ssh.exec_command('free -m')
+# if the command need more input when the socket is not closed
+# /n is needed!!!
+stdin.write('df -u /n')
+stdin.flush()
 # print result
 print stdout.read()
 # if more input is needed
