@@ -2,11 +2,24 @@
 import datetime
 import os
 import re
+import psutil
+import wmi
+
+user = 
+conn = wmi.WMI(computer=ipaddress, user=user, password=password)
+
+
+# 需要删除的进程名
+ps_name_list = ['iexplore.exe','chrome.exe','ctihuaweiexe.exe','EBeeper.exe','SimpleEventServer.exe']
+# 查找并删除进程
+for ps in psutil.process_iter():
+    if ps.name() in ps_name_list:
+        ps.terminate()
 
 # 获取当前时间
 current_time = datetime.datetime.now()
 # 输入文件夹路径
-directory = input('full directory path:')
+log_dir = input('full directory path:')
 # 获取目录下文件名
 filelist = os.listdir(directory)
 

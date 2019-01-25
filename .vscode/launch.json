@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Hzl",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "stopOnEntry": true,
+            "pythonPath": "F:\\learning\\hzl\\Scripts\\python.exe",
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
