@@ -12,7 +12,7 @@ tup_a = ('a','b','c')
 def func_1(**kwargs):
     try:
         print('**kwargs - print kwargs with func_1(**dict_a) :\n%s' % kwargs)
-        print('**kwargs - print **kwargs with func_1(**dict_a) :\n%s' % **kwargs)
+        # print('**kwargs - print **kwargs with func_1(**dict_a) :\n%s' % **kwargs)
     except Exception as e:
         print('**kwargs - print kwargs with func_1(dict_a) will raise error\n')
         print(repr(e))
