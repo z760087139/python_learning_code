@@ -1,5 +1,5 @@
 {
     "python.linting.pylintEnabled": false,
-    "python.pythonPath": "F:\\learning\\vir_python3.7\\python3.7\\Scripts\\python.exe",
+    "python.pythonPath": "D:\\python\\Anaconda\\envs\\anaconda_3.7\\python.exe",
     "local-history.path": "F:\\程序\\.history"
 }

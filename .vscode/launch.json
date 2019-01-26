@@ -13,6 +13,14 @@
             "stopOnEntry": true
         },
         {
+            "name": "Conda Scrapy 3.7",
+            "pythonPath": "D:\\python\\Anaconda\\envs\\anaconda_3.7\\python.exe",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "stopOnEntry": true
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
