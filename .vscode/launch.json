@@ -5,12 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Hzl",
+            "name": "Anaconda Python 2.7",
+            "pythonPath": "F:\\learning\\anaconda\\envs\\anaconda_3.7\\python.exe",
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "stopOnEntry": true,
-            "pythonPath": "F:\\learning\\hzl\\Scripts\\python.exe",
+            "stopOnEntry": true
         },
         {
             "name": "Python: Current File",
@@ -34,6 +34,14 @@
             "request": "launch",
             "program": "${file}",
             "stopOnEntry": true
+        },
+        {
+            "name": "Hzl",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "stopOnEntry": true,
+            "pythonPath": "F:\\learning\\hzl\\Scripts\\python.exe",
         },
         {
             "name": "Chrome current file",
