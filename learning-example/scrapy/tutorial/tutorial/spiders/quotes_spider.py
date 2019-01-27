@@ -1,6 +1,7 @@
 import  scrapy
 
 class QuotesSpider(scrapy.Spider):
+    # spider name, it is unique name in project
     name = "quotes"
 
     def start_requests(self):
