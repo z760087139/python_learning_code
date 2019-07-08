@@ -9,4 +9,4 @@ jdata = json.dumps(pydata)
 
 # read json object:
 
-redata = json.loads(jdata)
+redata = json.loads(jdata)  

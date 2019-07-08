@@ -2,9 +2,9 @@
 import mysql.connector
 import mysql.connector.pooling
 
-cnx = mysql.connector.connect(user='zeng', password="Zeng123+",
-                              host='192.168.23.128',
-                              database='employees',
+cnx = mysql.connector.connect(user='zeng', password="zeng123+",
+                              host='192.168.168.129',
+                              database='dmm',
                               port='3306')
 # cnx.close()
 
@@ -34,6 +34,23 @@ cnx = mysql.connector.connect(user='zeng', password="Zeng123+",
 # prepared cursor is a class
 cursor = cnx.cursor(prepared=True)
 
+# other cursor : 
+# such as dictionary
+dic_cursor = cnx.cursor(dictionary=True)
+# ...
+# return like [{'id':..,'name':..},{'id':..,'name':..}]
+
+# named_tuple
+named_cursor = cnx.cursor(named_tuple=True)
+# ..
+# return like [Row(id=1,name=..)]
+# using like :
+# a_list = [Row..]
+# for a in a_list:
+#   if a.id == 1:
+#       return a.name
+
+
 # execute a SQL
 sql1 = 'select * from test.test1 where id = %s' 
 id1 = 123
@@ -62,13 +79,16 @@ cursor.excute(sql3,par3)
 # data = {'insert_timestamp':input_day}
 
 # create connection pool
-dbconfg = {
+dbconfig = {
     "database": "test",
-    "user":     "joe",}
+    "user":     "zeng",
+    "host":     '192.168.23.131',
+    "password": 'Zeng123+',
+    }
 mypool = mysql.connector.pooling.MySQLConnectionPool(pool_name = "mypool",
                                                       pool_size = 3,
                                                       **dbconfig)
-
+pool_conn = mypool.get_connection()
 #close
 cursor.close()
 cnx.close()
