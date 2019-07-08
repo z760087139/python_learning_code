@@ -5,27 +5,28 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Anaconda Python 2.7",
+            "name": "Anaconda Python 3.7",
             "pythonPath": "F:\\learning\\anaconda\\envs\\anaconda_3.7\\python.exe",
             "type": "python",
             "request": "launch",
+            "console": "integratedTerminal",
             "program": "${file}",
-            "stopOnEntry": true
+            // "stopOnEntry": true
         },
         {
             "name": "Conda Scrapy 3.7",
-            "pythonPath": "D:\\python\\Anaconda\\envs\\anaconda_3.7\\python.exe",
+            "pythonPath": "F:\\python\\Anaconda\\envs\\anaconda_3.7\\python.exe",
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "stopOnEntry": true
+            // "stopOnEntry": true
         },
         {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "stopOnEntry": true
+            // "stopOnEntry": true
         },
         {
             "name": "Python 2.7",
@@ -41,7 +42,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "stopOnEntry": true
+            // "stopOnEntry": true
         },
         {
             "name": "Hzl",
@@ -86,6 +87,7 @@
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/web_code/manage.py",
+            "pythonPath": "F:\\learning\\vir_python3.7\\python3.7\\Scripts\\python.exe",
             "args": [
                 "runserver",
                 "--noreload",
