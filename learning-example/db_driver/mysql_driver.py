@@ -52,7 +52,7 @@ named_cursor = cnx.cursor(named_tuple=True)
 
 
 # execute a SQL
-sql1 = 'select * from test.test1 where id = %s' 
+sql1 = "select * from test.test1 where id = %s"
 id1 = 123
 cursor.execute(sql1,id1)
 # cursor.fetchall()
@@ -63,7 +63,7 @@ cursor.execute(sql1,id1)
 dict_cur = cnx.cursor(dictionary=True)
 # insert 
 # execut many
-sql2 = 'insert into test.test1 (name,number) values(%s,%s)'
+sql2 = "insert into test.test1 (name,number) values(%s,%s)"
 par2 = [('asdf',321),('zxcv',213)]
 cursor.executmany(sql2,par2)
 # cnx.commit()

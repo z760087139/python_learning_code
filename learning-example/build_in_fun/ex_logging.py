@@ -44,6 +44,12 @@ logger.addHandler(ch)
 logger.debug('debug level info')  # 不会记录到文件中，因为logger等级是info
 # logger 只发送info等级或以上的  handler记录debug或以上的数据 
 logger.info('info level info')
+
+# 创建子进程
+def get_logger(name):
+    global logger
+    return logger.getChild(name)
+
 # 异常出入
 # try: ...
 # except Exception,e:
